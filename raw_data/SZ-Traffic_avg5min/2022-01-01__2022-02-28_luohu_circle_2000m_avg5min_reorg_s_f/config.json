@@ -1,0 +1,48 @@
+{
+  "geo": {
+    "including_types": [
+      "LineString"
+    ],
+    "LineString": {
+      "width": "num",
+      "direction": "enum",
+      "snodeid": "num",
+      "enodeid": "num",
+      "length": "num",
+      "speedclass": "enum",
+      "lanenum": "num"
+    }
+  },
+  "rel": {
+    "including_types": [
+      "geo"
+    ],
+    "geo": {
+      "link_weight": "num"
+    }
+  },
+  "dyna": {
+    "including_types": [
+      "state"
+    ],
+    "state": {
+      "entity_id": "geo_id",
+      "traffic_speed": "num"
+    }
+  },
+  "info": {
+    "weight_adj_epsilon": 0.1,
+    "calculate_weight_adj": false,
+    "set_weight_link_or_dist": "link",
+    "init_weight_inf_or_zero": "zero",
+    "geo_file": "SZ-Traffic",
+    "rel_file": "SZ-Traffic",
+    "data_files": [
+      "SZ-Traffic"
+    ],
+    "output_dim": 1,
+    "data_col": "traffic_speed",
+    "weight_col": "link_weight",
+    "time_intervals": 300
+  }
+}
